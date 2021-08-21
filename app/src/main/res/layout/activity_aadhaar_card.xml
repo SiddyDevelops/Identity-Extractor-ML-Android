@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true"
-    tools:context=".AadhaarCardActivity">
+    tools:context=".Activities.AadhaarCardActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -72,7 +72,7 @@
                             android:background="?android:attr/selectableItemBackground"
                             android:clickable="true"
                             android:src="@drawable/ic_camera_back"
-                            android:onClick="takePicture"/>
+                            android:onClick="takeBackPicture"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -86,6 +86,21 @@
                     </LinearLayout>
 
                 </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reset"
+                    android:text="RESET"
+                    android:onClick="reset"
+                    android:backgroundTint="@color/black"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:visibility="gone"/>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
