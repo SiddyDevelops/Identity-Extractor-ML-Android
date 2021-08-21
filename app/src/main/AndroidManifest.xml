@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.siddydevelops.identityextractor">
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -9,9 +11,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IdentityExtractor">
-        <activity android:name=".GenericIDCardActivity"></activity>
-        <activity android:name=".PanCardActivity" />
-        <activity android:name=".AadhaarCardActivity" />
+        
+        <provider
+            android:authorities="com.siddydevelops.identityextractor.fileprovider"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+
+        </provider>
+
+        <activity android:name=".GenericIDCardActivity"
+            android:screenOrientation="portrait"
+            android:label="Generic ID Card Data Extract"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".PanCardActivity"
+            android:label="Pan Card Data Extract"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".AadhaarCardActivity"
+            android:label="Aadhaar Card Data Extract"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
