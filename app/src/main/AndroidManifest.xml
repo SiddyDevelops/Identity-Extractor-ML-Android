@@ -23,24 +23,24 @@
 
         </provider>
 
-        <activity android:name=".GenericIDCardActivity"
+        <activity android:name=".Activities.GenericIDCardActivity"
             android:screenOrientation="portrait"
             android:label="Generic ID Card Data Extract"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".Activities.MainActivity"/>
 
-        <activity android:name=".PanCardActivity"
+        <activity android:name=".Activities.PanCardActivity"
             android:label="Pan Card Data Extract"
             android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".Activities.MainActivity"/>
 
-        <activity android:name=".AadhaarCardActivity"
+        <activity android:name=".Activities.AadhaarCardActivity"
             android:label="Aadhaar Card Data Extract"
             android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
