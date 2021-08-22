@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true"
+    android:background="@color/white"
     tools:context=".Activities.AadhaarCardActivity">
 
     <RelativeLayout
@@ -106,6 +107,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
+                    android:backgroundTint="@color/white"
                     android:id="@+id/indo_card_view"
                     app:cardCornerRadius="12dp"
                     android:elevation="8dp">
