@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Identity Extractor</string>
     <string name="main_text">Text Extractor From Aadhaar Card, Pan Card and other Identity proofs for Indian citizens only, using on device Machine Learning </string>
+    <string name="extracted_info">Extracted Info from Image will be shown here.</string>
 </resources>

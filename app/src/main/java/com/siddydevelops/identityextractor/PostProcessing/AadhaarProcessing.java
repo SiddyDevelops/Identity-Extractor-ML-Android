@@ -93,9 +93,9 @@ public class AadhaarProcessing {
         //Search for year of birth
         for(i =0; i< orderData.size(); i++)
         {
-            if(orderData.get(i).contains("birth"))
+            if(orderData.get(i).contains("dob"))
             {
-                dataMap.put("yob",orderData.get(i).substring(orderData.get(i).length()-4));
+                dataMap.put("yob",orderData.get(i).substring(orderData.get(i).length()-10));
                 break;
             }
         }
@@ -148,6 +148,19 @@ public class AadhaarProcessing {
         if(i+1 < orderData.size())
         {
             dataMap.put("addressLine2",orderData.get(i+1));
+        }
+
+        if(i+2 < orderData.size())
+        {
+            dataMap.put("addressLine3",orderData.get(i+2));
+        }
+
+        if(i+3 < orderData.size())
+        {
+            dataMap.put("addressLine4",orderData.get(i+3));
+        }
+        else {
+            dataMap.put("addressLine4","Nothing");
         }
 
         //Pincode

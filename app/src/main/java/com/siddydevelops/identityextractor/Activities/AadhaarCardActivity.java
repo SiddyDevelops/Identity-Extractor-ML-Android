@@ -12,6 +12,8 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.Editable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,8 +43,7 @@ public class AadhaarCardActivity extends AppCompatActivity {
     static final int REQUEST_TAKE_PHOTO = 1;
     static final int REQUEST_TAKE_PHOTO_2 = 2;
     private Bitmap mImageBitmap, mImageBitmap2;
-    private EditText name, yearOfBirth, gender, aahaarNo, pincode, addressLine1, addressLine2,
-                        fatherName;
+    private EditText name, yearOfBirth, gender, aahaarNo, pincode, addressLine1, addressLine2;
     private Button reset;
 
     @Override
@@ -54,7 +55,6 @@ public class AadhaarCardActivity extends AppCompatActivity {
         backImage = findViewById(R.id.imageView2);
         name = findViewById(R.id.name_editText);
         gender = findViewById(R.id.gender_editText);
-        fatherName = findViewById(R.id.father_editText);
         aahaarNo = findViewById(R.id.aadhaar_editText);
         pincode = findViewById(R.id.pincode_editText);
         yearOfBirth = findViewById(R.id.yob_editText);
@@ -184,7 +184,6 @@ public class AadhaarCardActivity extends AppCompatActivity {
         frontImage.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_camera_front));
         name.getText().clear();
         yearOfBirth.getText().clear();
-        fatherName.getText().clear();
         gender.getText().clear();
         pincode.getText().clear();
         aahaarNo.getText().clear();
@@ -199,7 +198,6 @@ public class AadhaarCardActivity extends AppCompatActivity {
         {
             aahaarNo.setText(dataMap.get("aadhaar"), TextView.BufferType.EDITABLE);
             gender.setText(dataMap.get("gender"), TextView.BufferType.EDITABLE);
-            fatherName.setText(dataMap.get("fatherName"), TextView.BufferType.EDITABLE);
             yearOfBirth.setText(dataMap.get("yob"), TextView.BufferType.EDITABLE);
             name.setText(dataMap.get("name"), TextView.BufferType.EDITABLE);
         }
@@ -210,7 +208,11 @@ public class AadhaarCardActivity extends AppCompatActivity {
         if(dataMap != null)
         {
             addressLine1.setText(dataMap.get("addressLine1"), TextView.BufferType.EDITABLE);
-            addressLine2.setText(dataMap.get("addressLine2"), TextView.BufferType.EDITABLE);
+            addressLine2.setText(new StringBuilder().append(dataMap.get("addressLine2")).append(" ").append(dataMap.get("addressLine3")).append(" ").append(dataMap.get("addressLine4")).toString(), TextView.BufferType.EDITABLE);
+            //Editable pin_code = addressLine2.getText().toString().substring(addressLine2.toString().lastIndexOf(" ") + 1);
+            //String pin_code = dataMap.get("addressLine4").substring(dataMap.get("addressLine4").lastIndexOf(" ")+1);
+            //Log.i("Something",pin_code);
+            //pincode.toString().substring(pin_code.toString().lastIndexOf(" ") + 1);
             pincode.setText(dataMap.get("pincode"), TextView.BufferType.EDITABLE);
         }
     }
