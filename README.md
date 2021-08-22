@@ -36,9 +36,9 @@ The app offers the following Identity Proofs from where user inforamtion can be 
   - And many more...
 
 <p align="center">
-  <img width="200" height="400" src="https://user-images.githubusercontent.com/72121163/130345419-54755a7f-b169-4ce1-b134-049c25c3ff7f.png">
-  <img width="200" height="400" src="https://user-images.githubusercontent.com/72121163/130345463-271f3fa8-a237-40e2-85aa-09e182b163ae.png">
-  <img width="200" height="400" src="https://user-images.githubusercontent.com/72121163/130345470-41a45a40-fc09-4760-bb74-724b9d5d5df3.png">
+  <img width="100" height="250" src="https://user-images.githubusercontent.com/72121163/130345419-54755a7f-b169-4ce1-b134-049c25c3ff7f.png">
+  <img width="100" height="250" src="https://user-images.githubusercontent.com/72121163/130345463-271f3fa8-a237-40e2-85aa-09e182b163ae.png">
+  <img width="100" height="250" src="https://user-images.githubusercontent.com/72121163/130345470-41a45a40-fc09-4760-bb74-724b9d5d5df3.png">
 </p>
 <br/>
 
